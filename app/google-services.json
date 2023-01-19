@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "216731971903",
+    "project_id": "loginandregister-785a7",
+    "storage_bucket": "loginandregister-785a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216731971903:android:19d659584458bedc6c638a",
+        "android_client_info": {
+          "package_name": "com.example.loginandregister"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216731971903-m8jmd1ggh1ooctvi9mvbc6d80mcr1s26.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNlwF-UdSMVZiXyQqCg0MSyT6Vmacc3oM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216731971903-m8jmd1ggh1ooctvi9mvbc6d80mcr1s26.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
