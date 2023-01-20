@@ -31,20 +31,20 @@ public class LoginActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         progressDialog=new ProgressDialog(this);
 
-        progressDialog.show();
+
         binding.loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String email = binding.email.getText().toString().trim();
                 String pass = binding.password.getText().toString().trim();
-
+                progressDialog.show();
                 firebaseAuth.signInWithEmailAndPassword(email, pass)
                         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                             @Override
                             public void onSuccess(AuthResult authResult) {
                                 progressDialog.cancel();
                                 Toast.makeText(LoginActivity.this, "Login SuccessFully", Toast.LENGTH_SHORT).show();
-
+                                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
