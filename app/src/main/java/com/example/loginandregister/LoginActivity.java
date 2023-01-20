@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -43,8 +44,15 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onSuccess(AuthResult authResult) {
                                 progressDialog.cancel();
-                                Toast.makeText(LoginActivity.this, "Login SuccessFully", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                                if(email.equals("admin@gmail.com") && pass.equals("admin123")){
+                                    Toast.makeText(LoginActivity.this, "Login SuccessFully", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(LoginActivity.this, AdminHomeActivity.class));
+                                }else{
+                                    Toast.makeText(LoginActivity.this, "Login SuccessFully", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                                }
+
+
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
